@@ -1,0 +1,37 @@
+{
+  "name": "currencyconverter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+    "dev-bundle": "webpack -wd",
+    "start": "concurrently \"npm run dev-server\" \"npm run dev-bundle\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AashishUpadhyay/currencyconverter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AashishUpadhyay/currencyconverter/issues"
+  },
+  "homepage": "https://github.com/AashishUpadhyay/currencyconverter#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
