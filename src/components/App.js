@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom';
 
 import Conversion from './Conversion';
 
+import store from '../stores/configureStore'
+import { Provider } from 'react-redux';
+
+
 class App extends React.Component {
     render() {
         return (
             <div>
-                <Conversion />
+                <Provider store={store}><Conversion /></Provider>,
             </div>
         )
     }
 }
-
 
 export default App;
