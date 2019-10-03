@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Conversion from './Conversion';
+import Conversion from '../containers/Conversion';
 
 import store from '../stores/configureStore'
 import { Provider } from 'react-redux';

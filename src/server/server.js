@@ -24,7 +24,7 @@ server.get('/', (req, res) => {
 });
 
 server.get('/api/conversion', function (req, res, next) {
-
+  debugger;
   var originAmount = req.query.originAmount;
   var originCurrency = req.query.originCurrency;
   var destAmount = req.query.destAmount;
@@ -47,6 +47,7 @@ server.get('/api/conversion', function (req, res, next) {
 });
 
 server.get('/api/fees', function (req, res, next) {
+
   var originAmount = req.query.originAmount;
   var originCurrency = req.query.originCurrency;
   var destCurrency = req.query.destCurrency;
