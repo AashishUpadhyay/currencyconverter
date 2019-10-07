@@ -10,7 +10,7 @@ var defaultState = {
     destinationCurrency: 'EUR'
 };
 
-function amount(state = defaultState, action) {
+function amount(action, state = defaultState) {
     switch (action.type) {
         case (actionTypes.CHANGE_ORIGIN_AMOUNT):
             return { ...state, originAmount: action.data };

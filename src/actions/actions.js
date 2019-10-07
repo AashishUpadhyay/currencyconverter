@@ -49,6 +49,7 @@ export function fetchMakeFee(payload) {
 }
 
 export function _makeConversionAjaxCall(payload, dispatch) {
+    console.log('I AM CALLED!');
     dispatch({ type: actionTypes.REQUEST_CONVERSION_RATE, data: payload });
 
     axios.get('/api/conversion', {
