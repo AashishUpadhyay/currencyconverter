@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The conversion component tests! Display conversion element! it should not regress 1`] = `
+<div>
+  <label>
+    Convert
+  </label>
+   
+  <input
+    className="amount-field"
+    onChange={[Function]}
+    value={100}
+  />
+  <select
+    onChange={[Function]}
+    value="USD"
+  >
+    <option
+      value="USD"
+    >
+      USD
+    </option>
+    <option
+      value="EUR"
+    >
+      EUR
+    </option>
+    <option
+      value="JPY"
+    >
+      JPY
+    </option>
+  </select>
+  to 
+  <input
+    className="amount-field"
+    onChange={[Function]}
+    value={120}
+  />
+   
+  <select
+    onChange={[Function]}
+    value="EUR"
+  >
+    <option
+      value="USD"
+    >
+      USD
+    </option>
+    <option
+      value="EUR"
+    >
+      EUR
+    </option>
+    <option
+      value="JPY"
+    >
+      JPY
+    </option>
+  </select>
+  <br />
+  <br />
+  <br />
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            Conversion Rate
+          </td>
+          <td>
+            1 
+            USD
+             -&gt; 
+            1.20
+             
+            EUR
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Fee
+          </td>
+          <td>
+            10.00
+             
+            USD
+          </td>
+        </tr>
+        <tr>
+          <td
+            className="total-label"
+          >
+            Total Cost
+          </td>
+          <td>
+            130.00
+             
+            USD
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

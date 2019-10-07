@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 import FeesTable from '../components/FeesTable';
 import * as actions from '../actions/actions';
 
-class Conversion extends React.Component {
+export class Conversion extends React.Component {
     constructor(props) {
         super(props);
-        // bind event listeners so 'this' will be available in the handlers
         this.handleOriginAmountChange = this.handleOriginAmountChange.bind(this);
         this.handleDestAmountChange = this.handleDestAmountChange.bind(this);
         this.handleOriginCurrencyChange = this.handleOriginCurrency.bind(this);
@@ -122,7 +121,7 @@ class Conversion extends React.Component {
     }
 }
 
-export default connect((state, props) => {
+export const mapStateToProps = (state) => {
     return {
         originAmount: state.amount.originAmount,
         destinationAmount: state.amount.destinationAmount,
@@ -133,4 +132,6 @@ export default connect((state, props) => {
         destinationCurrency: state.amount.destinationCurrency,
         errorMsg: state.error.errorMsg
     }
-})(Conversion);
+};
+
+export default connect(mapStateToProps)(Conversion);
