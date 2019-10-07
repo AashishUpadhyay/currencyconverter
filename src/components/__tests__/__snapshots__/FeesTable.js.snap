@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The fees table comonent renders as expected 1`] = `
+<div>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          Conversion Rate
+        </td>
+        <td>
+          1 
+          USD
+           -&gt; 
+          1.30
+           
+          EUR
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Fee
+        </td>
+        <td>
+          10.00
+           
+          USD
+        </td>
+      </tr>
+      <tr>
+        <td
+          className="total-label"
+        >
+          Total Cost
+        </td>
+        <td>
+          101.00
+           
+          USD
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
