@@ -1,6 +1,6 @@
 import { ActionTypes as actionTypes } from '../constants';
 
-var defaultState = {
+const defaultState = {
     originAmount: '0.00',
     destinationAmount: '0.00',
     conversionRate: 1.5,
@@ -10,7 +10,7 @@ var defaultState = {
     destinationCurrency: 'EUR'
 };
 
-function amount(action, state = defaultState) {
+function amount(state = defaultState, action) {
     switch (action.type) {
         case (actionTypes.CHANGE_ORIGIN_AMOUNT):
             return { ...state, originAmount: action.data };

@@ -48,6 +48,10 @@ export function fetchMakeFee(payload) {
     }
 }
 
+var makeConversionAjaxCall = debounce(_makeConversionAjaxCall, 300);
+var makeConversionAndFeesAjaxCall = debounce(_makeConversionAndFeesAjaxCall, 300);
+var makeMakeFeeAjaxCall = debounce(_makeMakeFeeAjaxCall, 300);
+
 export function _makeConversionAjaxCall(payload, dispatch) {
     console.log('I AM CALLED!');
     dispatch({ type: actionTypes.REQUEST_CONVERSION_RATE, data: payload });
@@ -62,8 +66,6 @@ export function _makeConversionAjaxCall(payload, dispatch) {
             dispatch({ type: actionTypes.RECEIVED_CONVERSION_RATE_FAILURE, data: err.data });
         });
 }
-
-var makeConversionAjaxCall = debounce(_makeConversionAjaxCall, 300);
 
 function _makeConversionAndFeesAjaxCall(payload, dispatch) {
     dispatch({ type: actionTypes.REQUEST_CONVERSION_RATE, data: payload });
@@ -81,8 +83,6 @@ function _makeConversionAndFeesAjaxCall(payload, dispatch) {
         });
 }
 
-var makeConversionAndFeesAjaxCall = debounce(_makeConversionAndFeesAjaxCall, 300);
-
 function _makeMakeFeeAjaxCall(payload, dispatch) {
     dispatch({ type: actionTypes.REQUEST_MAKE_FEE, data: payload });
 
@@ -97,8 +97,6 @@ function _makeMakeFeeAjaxCall(payload, dispatch) {
             dispatch({ type: actionTypes.RECEIVED_AJAX_CALL_FAILURE, data: { msg: msg, failedCall: 'fees' } });
         });
 }
-
-var makeMakeFeeAjaxCall = debounce(_makeMakeFeeAjaxCall, 300);
 
 function getErrorMessage(resp) {
     var msg = 'Error. Please try again later.'
