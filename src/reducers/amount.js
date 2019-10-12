@@ -25,6 +25,9 @@ function amount(state = defaultState, action) {
             return { ...state, originCurrency: action.data };
         case (actionTypes.CHANGE_DESTINATION_CURRENCY):
             return { ...state, destinationCurrency: action.data };
+        case (actionTypes.REQUEST_CONVERSION_RATE):
+        case (actionTypes.REQUEST_MAKE_FEE):
+        case (actionTypes.REQUEST_CONVERSION_RATE_AND_FEES):
         default:
             return state;
     }

@@ -32,21 +32,6 @@ export class Conversion extends React.Component {
         this.props.dispatch(actions.fetchMakeFee(payload));
     }
 
-    handleDestinationCurrency(event) {
-        var newCurrency = event.target.value;
-
-        this.props.dispatch(actions.changeDestinationCurrency(newCurrency));
-
-        var payload = {
-            destAmount: this.props.originAmount,
-            originCurrency: this.props.originCurrency,
-            destCurrency: newCurrency,
-            calcOriginAmount: true
-        }
-
-        this.props.dispatch(actions.fetchConversionRateAndFees(payload));
-    }
-
     handleOriginAmountChange(event) {
         var newAmount = event.target.value;
 
@@ -65,6 +50,21 @@ export class Conversion extends React.Component {
 
         this.props.dispatch(actions.fetchConversionRate(payload));
         this.props.dispatch(actions.fetchMakeFee(payload));
+    }
+
+    handleDestinationCurrency(event) {
+        var newCurrency = event.target.value;
+
+        this.props.dispatch(actions.changeDestinationCurrency(newCurrency));
+
+        var payload = {
+            destAmount: this.props.originAmount,
+            originCurrency: this.props.originCurrency,
+            destCurrency: newCurrency,
+            calcOriginAmount: true
+        }
+
+        this.props.dispatch(actions.fetchConversionRateAndFees(payload));
     }
 
     handleDestAmountChange(event) {

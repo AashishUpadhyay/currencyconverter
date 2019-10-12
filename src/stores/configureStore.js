@@ -12,7 +12,7 @@ const sagaMiddleWare = createSagaMiddleware();
 
 const store = createStore(
     rootReducer,
-    applyMiddleware(thunk, logger, sagaMiddleWare)
+    applyMiddleware(thunk, sagaMiddleWare, logger)
 );
 console.info("Saga middleware implemented!")
 initSagas(sagaMiddleWare);

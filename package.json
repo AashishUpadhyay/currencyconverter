@@ -40,6 +40,7 @@
     "react-test-renderer": "^16.2.0",
     "redux-mock-store": "^1.5.3",
     "redux-saga": "^1.1.1",
+    "reselect": "^4.0.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.0",

@@ -10,10 +10,10 @@ export function* currencyConversionSaga() {
 }
 
 function conversionApi(payload) {
-   return axios.get('/api/conversion', {
+    return axios.get('/api/conversion', {
         params: payload
     });
-  }
+}
 
 export function* fetchConversionRateSaga() {
     let payload = {
